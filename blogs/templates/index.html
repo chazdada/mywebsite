@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% load i18n mezzanine_tags %}
+
+{% block full_meta_title %}
+{% if settings.SITE_TITLE %}{{ settings.SITE_TITLE }}
+{% if settings.SITE_TAGLINE %} - {{ settings.SITE_TAGLINE }}{% endif %}
+{% else %}{% trans "Home" %}{% endif %}
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block breadcrumb_menu %}
+
+{% endblock %}
+
+{% block main %}
+<h2>{% trans "&nbsp;&nbsp;Welcome" %}</h2>
+<p><ul class="thumbnails">
+<li style="list-style-type:none;"><img class="thumbnail" src="{{ STATIC_URL }}img/main.jpg" /></li>
+</ul></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chazdada网站，个人博客，学习笔记，生活点滴。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;做一件有价值的事，一直做，然后等待时间的汇报！&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--chaz</p>
+
+{% endblock %}
+
+{% block right_panel %}
+<h3>{% trans "About" %}</h3>
+<p>
+chazdada联系方式
+<ul>
+<li>邮箱：sdlwscz@gmail.com</li>
+<li>github:chazdada</li>
+<li>新浪weibo:chazdada</li>
+<li>博客园：http://www.cnblogs.com/jackzone/</li>
+</ul></p>
+<h3>{% trans "Links" %}</h3>
+<ul class="unstyled">
+<li><a href="http://google.com">Google</a></li>
+<li><a href="http://www.baidu.com">百度</a></li>
+<li><a href="https://www.cnblogs.com/">博客园</a></li>
+<li><a href="https://github.com/">GitHub</a></li>
+</ul>
+{% endblock %}
